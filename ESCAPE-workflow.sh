@@ -9,6 +9,12 @@ RSE_destiny=INFN-NA-DPM
 RSE_QOS=QOS=FAST
 scope_n=MAGIC_PIC_BRUZZESE
 
+echo "set up your RSEs to eliminate files once the rules has been deleted"
+
+rucio-admin rse set-attribute --key greedyDeletion --value True --rse $RSE_origin
+rucio-admin rse set-attribute --key greedyDeletion --value True --rse $RSE_desitiny
+rucio-admin rse set-attribute --key greedyDeletion --value True --rse $RSE_QOS
+
 echo "this file will be generated $file_n"
 
 dd if=/dev/urandom of=$file_n bs=$file_size count=1
@@ -51,3 +57,9 @@ echo "$file_n will be located under the paths : "
 
 rucio list-file-replicas $scope_n:$file_n
 
+echo "the followin file will be downloaded: $file_n"
+mkdir download-files
+rucio download --dir ./download-files $scope_n:$file_n
+
+echo "perform CHECKSUM"
+gfal-sum ./download-files/$scope_n/$file_n ADLER32
