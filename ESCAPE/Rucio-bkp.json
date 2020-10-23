@@ -1,0 +1,53 @@
+{
+    "20201023_M1_84919096.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-23T08:08:22Z",
+                "checksum": "eca0470178275ac94e5de381969ed232"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-23T08:08:25Z",
+                "downloaded": "2020-10-23T08:08:26Z",
+                "checksum": "eca0470178275ac94e5de381969ed232"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-23T08:08:25Z"
+            }
+        }
+    },
+    "20201023_M1_43118797.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-23T06:40:13Z",
+                "checksum": "e2365bc6a6fbd41287fae648437296fa"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-23T06:40:16Z",
+                "downloaded": "2020-10-23T07:59:48Z",
+                "checksum": "e2365bc6a6fbd41287fae648437296fa"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-23T06:40:17Z"
+            }
+        }
+    },
+    "20201023_M1_83070685.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-23T06:40:17Z",
+                "checksum": "e2365bc6a6fbd41287fae648437296fa"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-23T06:40:19Z",
+                "downloaded": "2020-10-23T07:59:49Z",
+                "checksum": "e2365bc6a6fbd41287fae648437296fa"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-23T06:40:19Z"
+            }
+        }
+    }
+}
