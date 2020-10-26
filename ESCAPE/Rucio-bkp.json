@@ -1,4 +1,202 @@
 {
+    "20201026_M1_36973941.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-26T11:26:21Z",
+                "checksum": "22031453e4c3a1a0d47b0b97d83d8984",
+                "path": "/nfs/pic.es/user/b/bruzzese/Rucio-v2/20201026_M1_36973941.005_D_1ES1959_650-W0.40_000.root"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-26T11:26:24Z",
+                "downloaded": "2020-10-26T11:26:26Z",
+                "checksum": "22031453e4c3a1a0d47b0b97d83d8984"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-26T11:26:25Z"
+            },
+            "INFN-NA-DPM": {
+                "registered": "2020-10-26T11:26:25Z"
+            }
+        }
+    },
+    "20201026_M1_38290737.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-26T11:23:54Z",
+                "checksum": "0b867e53c1d233ce9fe49d54549a2323",
+                "path": "/nfs/pic.es/user/b/bruzzese/Rucio-v2/20201026_M1_38290737.005_D_1ES1959_650-W0.40_000.root"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-26T11:23:57Z",
+                "downloaded": "2020-10-26T11:23:59Z",
+                "checksum": "0b867e53c1d233ce9fe49d54549a2323"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-26T11:23:57Z"
+            },
+            "INFN-NA-DPM": {
+                "registered": "2020-10-26T11:23:58Z"
+            }
+        }
+    },
+    "20201026_M1_95000364.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-26T11:23:14Z",
+                "checksum": "0b91f1d54f932dc6382dc69f197900cf",
+                "path": "/nfs/pic.es/user/b/bruzzese/Rucio-v2/20201026_M1_95000364.005_D_1ES1959_650-W0.40_000.root"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-26T11:23:17Z",
+                "downloaded": "2020-10-26T11:23:19Z",
+                "checksum": "0b91f1d54f932dc6382dc69f197900cf"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-26T11:23:18Z"
+            },
+            "INFN-NA-DPM": {
+                "registered": "2020-10-26T11:23:18Z"
+            }
+        }
+    },
+    "20201026_M1_76842933.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-26T11:20:32Z",
+                "checksum": "53553242d57214aaa5726a09b05fe7bc",
+                "path": "/nfs/pic.es/user/b/bruzzese/Rucio-v2/20201026_M1_76842933.005_D_1ES1959_650-W0.40_000.root"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-26T11:20:34Z",
+                "downloaded": "2020-10-26T11:20:36Z",
+                "checksum": "53553242d57214aaa5726a09b05fe7bc"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-26T11:20:35Z"
+            },
+            "INFN-NA-DPM": {
+                "registered": "2020-10-26T11:20:35Z"
+            }
+        }
+    },
+    "20201026_M1_95088901.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-26T11:10:37Z",
+                "checksum": "e6b62b76fb2eb2a0e0adde0c067da680"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-26T11:10:40Z",
+                "downloaded": "2020-10-26T11:12:38Z",
+                "checksum": "e6b62b76fb2eb2a0e0adde0c067da680"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-26T11:10:40Z"
+            },
+            "INFN-NA-DPM": {
+                "registered": "2020-10-26T11:10:41Z"
+            }
+        }
+    },
+    "20201026_M1_77044236.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-26T11:09:57Z",
+                "checksum": "bbf7c6077962a7c28114dbd10be947cd"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-26T11:10:00Z",
+                "downloaded": "2020-10-26T11:10:01Z",
+                "checksum": "bbf7c6077962a7c28114dbd10be947cd"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-26T11:10:00Z"
+            },
+            "INFN-NA-DPM": {
+                "registered": "2020-10-26T11:10:00Z"
+            }
+        }
+    },
+    "20201026_M1_10007109.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-26T11:09:14Z",
+                "checksum": "862dec5c27142824a394bc6464928f48"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-26T11:09:17Z",
+                "downloaded": "2020-10-26T11:09:18Z",
+                "checksum": "862dec5c27142824a394bc6464928f48"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-26T11:09:17Z"
+            },
+            "INFN-NA-DPM": {
+                "registered": "2020-10-26T11:09:17Z"
+            }
+        }
+    },
+    "20201026_M1_77470039.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-26T11:08:16Z",
+                "checksum": "1681ffc6e046c7af98c9e6c232a3fe0a"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-26T11:08:19Z",
+                "downloaded": "2020-10-26T11:08:22Z",
+                "checksum": "1681ffc6e046c7af98c9e6c232a3fe0a"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-26T11:08:21Z"
+            },
+            "INFN-NA-DPM": {
+                "registered": "2020-10-26T11:08:21Z"
+            }
+        }
+    },
+    "20201026_M1_88676838.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-26T11:01:28Z",
+                "checksum": "7c909b3e2820c8b47ed418753698a6da"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-26T11:01:30Z",
+                "downloaded": "2020-10-26T11:01:31Z",
+                "checksum": "7c909b3e2820c8b47ed418753698a6da"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-26T11:01:31Z"
+            }
+        }
+    },
+    "20201026_M1_75952056.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-26T10:03:36Z",
+                "checksum": "0b867e53c1d233ce9fe49d54549a2323"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-26T10:03:39Z",
+                "downloaded": "2020-10-26T10:03:40Z",
+                "checksum": "0b867e53c1d233ce9fe49d54549a2323"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-26T10:03:39Z"
+            }
+        }
+    },
     "20201023_M1_84919096.005_D_1ES1959_650-W0.40_000.root": {
         "Scope": "MAGIC_PIC_BRUZZESE",
         "Replicated": {
@@ -47,6 +245,212 @@
             },
             "QOS=FAST": {
                 "registered": "2020-10-23T06:40:19Z"
+            }
+        }
+    },
+    "20201022_M1_90436492.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T13:31:19Z",
+                "checksum": "db46e81649d6863b16bd99ab139c865b"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T13:31:21Z"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-22T13:31:21Z"
+            }
+        }
+    },
+    "20201022_M1_99702207.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T13:31:21Z",
+                "checksum": "db46e81649d6863b16bd99ab139c865b"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T13:31:23Z"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-22T13:31:23Z"
+            }
+        }
+    },
+    "20201022_M1_40780825.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T13:27:29Z",
+                "checksum": "2c1cf4f76fa1cecc0c4737cfd8d95118"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T13:27:33Z"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-22T13:27:34Z"
+            }
+        }
+    },
+    "20201022_M1_77564909.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T13:27:34Z",
+                "checksum": "2c1cf4f76fa1cecc0c4737cfd8d95118"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T13:27:36Z"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-22T13:27:36Z"
+            }
+        }
+    },
+    "20201022_M1_34098981.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T13:11:18Z",
+                "checksum": "3287282fa1a1523a294fb018e3679872"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T13:11:21Z"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-22T13:11:21Z"
+            }
+        }
+    },
+    "20201022_M1_63346965.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T13:11:21Z",
+                "checksum": "3287282fa1a1523a294fb018e3679872"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T13:11:24Z"
+            },
+            "QOS=FAST": {
+                "registered": "2020-10-22T13:11:24Z"
+            }
+        }
+    },
+    "20201022_M1_60605275.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T12:57:15Z",
+                "checksum": "74da4121dc1c0ed2a8e5b0741f824034"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T12:57:15Z"
+            }
+        }
+    },
+    "20201022_M1_83508153.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T12:57:17Z",
+                "checksum": "74da4121dc1c0ed2a8e5b0741f824034"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T12:57:17Z"
+            }
+        }
+    },
+    "20201022_M1_40084656.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T12:54:56Z",
+                "checksum": "74da4121dc1c0ed2a8e5b0741f824034"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T12:54:56Z"
+            }
+        }
+    },
+    "20201022_M1_30692994.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T12:54:58Z",
+                "checksum": "74da4121dc1c0ed2a8e5b0741f824034"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T12:54:58Z"
+            }
+        }
+    },
+    "20201022_M1_73226220.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T12:53:24Z",
+                "checksum": "b0001"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T12:53:24Z"
+            }
+        }
+    },
+    "20201022_M1_55500157.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T12:53:26Z",
+                "checksum": "b0001"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T12:53:26Z"
+            }
+        }
+    },
+    "20201022_M1_61942198.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T12:43:40Z"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T12:43:40Z"
+            }
+        }
+    },
+    "20201022_M1_92232025.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T12:43:42Z"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T12:43:42Z"
+            }
+        }
+    },
+    "20201022_M1_33082671.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T12:40:12Z"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T12:40:12Z"
+            }
+        }
+    },
+    "20201022_M1_23982638.005_D_1ES1959_650-W0.40_000.root": {
+        "Scope": "MAGIC_PIC_BRUZZESE",
+        "Replicated": {
+            "Local": {
+                "registered": "2020-10-22T12:40:15Z"
+            },
+            "PIC-DCACHE": {
+                "registered": "2020-10-22T12:40:15Z"
             }
         }
     }
