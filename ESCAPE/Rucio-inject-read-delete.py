@@ -37,9 +37,10 @@ gfal = Gfal2Context()
  
 RSE_origin = 'PIC-INJECT'
 RSE_destiny = 'PIC-DCACHE'
+RSE_destiny_2 = 'INFN-NA-DPM'
 RSE_QOS = 'QOS=FAST'
 
-RSEs = {'RSE_destiny':RSE_destiny, 'RSE_QOS':RSE_QOS}
+RSEs = {'RSE_destiny':RSE_destiny, 'RSE_QOS':RSE_QOS, 'RSE_destiny_2':RSE_destiny_2}
 
 account = 'bruzzese'
 auth_type = 'x509_proxy'
@@ -148,7 +149,6 @@ def addReplicaRule(destRSE, group, new_scope=Default_Scope):
 
     if destRSE:
         try:
-            #rule = rulesClient.add_replication_rule([{"scope":new_scope,"name":group}],copies=1, lifetime=5, rse_expression=destRSE, grouping='ALL', account=account, purge_replicas=True, source_replica_expression=RSE_destiny)
             rule = rulesClient.add_replication_rule([{"scope":new_scope,"name":group}],copies=1, rse_expression=destRSE, grouping='ALL', account=account, purge_replicas=True, source_replica_expression=RSE_destiny)
             return(rule[0])
         
@@ -229,7 +229,7 @@ for n in range(0, len(list_files)) :
     
     result_dict[name_file] = {} 
     result_dict[name_file]['Scope'] = Default_Scope
-    result_dict[name_file]['Replicated'] = {'Local' : {'registered': datetime.utcnow().replace(tzinfo=pytz.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),'checksum':getchecksum(name_file)}}
+    result_dict[name_file]['Replicated'] = {'Local' : {'registered': datetime.utcnow().replace(tzinfo=pytz.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),'checksum':getchecksum(name_file), 'path':os.path.join(os.getcwd(),name_file)}}
 
     # Perform upload
     client_upload = uploadClient.upload([file])
@@ -258,7 +258,7 @@ for n in range(0, len(list_files)) :
     
     if json_check() == True :
         result_dict.update(stateCheck())
-
+        
 # Save the uploads, replication and time into a json file
 json_write(result_dict)
 
@@ -272,7 +272,6 @@ json_write(result_dict)
 for n in range(0, len(list_files)) :
     
     name_file = list_files[n]
-    dataset_name = str(look_for_run(name_file))
     download = downloadClient.download_dids(items=[{'did':'{}:{}'.format(Default_Scope,name_file)}], num_threads=2, trace_custom_fields={}, traces_copy_out=None)
     
     result_dict = stateCheck()
@@ -282,13 +281,15 @@ for n in range(0, len(list_files)) :
             temp_dict[name_file] = {} 
             temp_dict[name_file]['Replicated'] = {download[0]['sources'][0]['rse'] : {'downloaded': datetime.utcnow().replace(tzinfo=pytz.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),'checksum':gfal.checksum('file:///'+download[0]['dest_file_paths'][0],'md5')}}
             result_dict[name_file]['Replicated'][download[0]['sources'][0]['rse']].update(temp_dict[name_file]['Replicated'][download[0]['sources'][0]['rse']])
-            
     json_write(result_dict)
     os.remove(download[0]['dest_file_paths'][0]) 
-    
+    os.remove(result_dict[name_file]['Replicated']['Local']['path'])
 
 
 # In[ ]:
+
+
+
 
 
 
