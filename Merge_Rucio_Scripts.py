@@ -351,17 +351,18 @@ class Rucio :
         # Add dummy dataset for replicating at Destination RSE
         # Sometimes Rucio ends up with an error message like this : rucio.common.exception.RuleNotFound: No replication rule found. 
         # In order to avoid that nonsense error we do the following loop :
-        '''for i in range(0,100):
-            while True:
-                try:
-                    # do stuff
-                    rule = self.addReplicaRule(dest_RSE, group=carrier_dataset)
-                    if rule != None :
-                        rule_child = rule 
-                except :
-                    continue
-                break'''
-        rule_child = self.addReplicaRule(dest_RSE, group=carrier_dataset)
+        for i in range(0,10):
+            try:
+                # do stuff
+                rule = self.addReplicaRule(dest_RSE, group=carrier_dataset)
+                if rule != None :
+                    rule_child = rule 
+                print(rule_child)
+                break
+            except :
+                continue
+
+	# rule_child = self.addReplicaRule(dest_RSE, group=carrier_dataset)
 
         # Add dummy dataset for replicating Origin RSE
         rule_parent = self.addReplicaRule(org_RSE, group=carrier_dataset)
@@ -801,3 +802,4 @@ if __name__ == '__main__':
 
     # 3) Plot RSE usage 
     g1.send_to_graf(r1.stats_usage_rules(r1.rses()))
+
