@@ -165,7 +165,7 @@ print(client.whoami())
 print(client.ping())
 
 
-# In[9]:
+# In[4]:
 
 
 
@@ -265,7 +265,7 @@ def look_for_data(fileName) :
 # In[3]:
 
 
-# In[12]:
+# In[5]:
 
 
 
@@ -299,7 +299,7 @@ def make_dir(full_path) :
     full_path = str(DEFAULT_PATH) + str(full_path)
     filename, file_extension = os.path.splitext(full_path)
     
-    if '.root' in file_extension or '.gz' in file_extension :
+    if '.root' in file_extension or '.gz' in file_extension or '.h5' or '.fz' or 'fits' :
         full_path, f_name = os.path.split(full_path) 
         gfal.mkdir_rec(full_path, 775)
 
@@ -358,7 +358,7 @@ def write_json(data, filename=json_file):
 # In[4]:
 
 
-# In[60]:
+# In[ ]:
 
 
 
