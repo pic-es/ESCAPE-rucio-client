@@ -378,7 +378,7 @@ class Rucio :
         # Make sure your dataset is ephemeral
 
         # self.client.set_metadata(scope=self.myscope, name=carrier_dataset, key='lifetime', value=86400) # 86400 in seconds = 1 day       
-        self.client.set_metadata(scope=self.myscope, name=carrier_dataset) 
+        # self.client.set_metadata(scope=self.myscope, name=carrier_dataset) 
 
         # Create a completly new create the RULE: 
         for filemd in filemds :
@@ -648,6 +648,38 @@ class Look_for_Files :
 
 
 
+############################
+
+# Check existence of json File
+
+############################
+
+def json_write(data, filename='Rucio-CTA-bkp-test.json'): 
+    with io.open(filename, 'w') as f: 
+        json.dump(data, f, ensure_ascii=False, indent=4)
+        
+def json_check(json_file_name='Rucio-bkp-test.json') :
+    # checks if file exists
+    if not os.path.isfile(json_file_name) : 
+        logger.debug("Either file is missing or is not readable, creating file...")
+        return(False)
+    
+    elif os.stat(json_file_name).st_size == 0 :
+        os.remove(json_file_name)
+        return(False)
+    
+    elif os.path.isfile(json_file_name) and os.access(json_file_name, os.R_OK) :
+        logger.debug("File exists in JSON and is readable")
+        return(True)
+
+
+# In[5]:
+
+
+# In[5]:
+
+
+
 def register_rucio() : 
         
     # Look for files in the orgRse
@@ -736,7 +768,7 @@ def register_rucio() :
         return(result_dict)
 
 
-# In[5]:
+# In[ ]:
 
 
 if __name__ == '__main__':
@@ -753,6 +785,21 @@ if __name__ == '__main__':
     # It creates the main rule for replication at Destinatio RSE (see rses_catch)
     replication_dict = register_rucio()
     # Look for files in the orgRse
+
+    if json_check() == True :
+        check_dict = stateCheck()
+        # if both results resulted ok
+        if isinstance(replication_dict,dict) & isinstance(check_dict,dict):
+            replication_dict.update(check_dict)
+        elif not check_dict : 
+            replication_dict = replication_dict
+        elif not replication_dict: 
+            replication_dict = check_dict
+
+    # creates a resulting dictionary with the files found with their respective 
+    # RSEs where they have been replicated
+
+    json_write(replication_dict)
 
 
 # In[ ]:
