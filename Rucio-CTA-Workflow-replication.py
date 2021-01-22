@@ -589,10 +589,11 @@ class Look_for_Files :
     def check_directory(self, path):
         try :
             full_path = self.gfal.listdir(str(path))
-            if not full_path :
-                is_dir_or_not = False
-            else:
-                is_dir_or_not = True        
+            is_dir_or_not = True
+            # if not full_path :
+            #     is_dir_or_not = False
+            # else:
+            #     is_dir_or_not = True        
         except:
             is_dir_or_not = False
 
@@ -769,6 +770,89 @@ def register_rucio() :
 
 
 # In[ ]:
+
+
+def stateCheck(json_file='Rucio-bkp-CTA-test.json'):
+      
+    with open(json_file) as f : 
+        data_keys  = json.load(f)
+        for file in data_keys :
+            for ele in data_keys[file].values():
+                if isinstance(ele,dict):
+                    for key, value in ele.items():
+                        if key in r1.rses() :
+                            
+                            if 'path' in value:
+                                if value['state'] == 'ALIVE' :
+                                    # Check for deleted files
+                                    try :
+                                        existence = r1.file_exists(value['path'])
+                                        
+                                    # If gfal fails, it means that the file still exists  
+                                    except :
+                                        print('failed')
+                                        dead_state = dict()
+                                        dead_state = {'state': 'DEAD',
+                                                    'deleted': datetime.utcnow().replace(tzinfo=pytz.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+                                                        }
+
+                                        data_keys[file]['Replicated'][key].update(dead_state) 
+
+                            elif 'state' in value :
+                                # Check completed transference files
+                                if value['state'] == 'REPLICATING' :
+                                    #check = check_replica(DEFAULT_SCOPE, file.strip('+').replace('+','_'), dest_rse=info[0])
+                                    
+                                    check = r1.check_replica(lfn=file.replace('+','_'), dest_rse=key)
+                                    
+                                    #if there's no replica at destiny RSE
+                                    if check != False : 
+                                        
+                                        replication_state = dict()
+                                        replication_state = {'path': check,
+                                                             'copied': datetime.utcnow().replace(tzinfo=pytz.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+                                                             'state': 'ALIVE'}
+                                        # Update the dictionary with the file properties
+                                        data_keys[file]['Replicated'][key].update(replication_state) 
+        return(data_keys)
+
+        
+
+
+# In[7]:
+
+
+# In[ ]:
+
+
+class Grafana : 
+    def __init__(self) :
+        self.gr_prefix = [line for line in open('/etc/collectd.d/write_graphite-config.conf', 'r').readlines() if "Prefix" in line][0].strip().split()[1].strip('"')
+
+    ## Prepare data for plots replicas 
+    def prepare_grafana(self, dictionary, string='RUCIO.') :
+        metric_list = []
+        for key in dictionary.keys() :
+            if isinstance(dictionary[key],int):
+                metric_list.append((str(string+key),dictionary[key]) )
+
+            elif isinstance(dictionary[key],dict):
+                metric_list.extend(self.prepare_grafana(dictionary[key], str(string+key+'.')))       
+        return(metric_list)
+    
+    def send_to_graf(self, dictionary, myport=2013, myprotocol='udp') : 
+        for key in self.prepare_grafana(dictionary):
+            if (key[0], key[1]) is not None : 
+                #print(key[0].lower(),key[1])
+                graphyte.Sender('graphite01.pic.es', port=myport, protocol=myprotocol, prefix=self.gr_prefix + socket.gethostname().replace(".","_")).send(key[0].lower(), key[1])
+                graphyte.Sender('graphite02.pic.es', port=myport, protocol=myprotocol, prefix=self.gr_prefix + socket.gethostname().replace(".","_")).send(key[0].lower(), key[1])
+    
+
+
+# In[8]:
+
+
+# In[6]:
 
 
 if __name__ == '__main__':

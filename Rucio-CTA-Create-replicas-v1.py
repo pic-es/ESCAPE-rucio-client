@@ -118,7 +118,9 @@ def get_rse_url(rse):
 # In[2]:
 
 
-json_file = 'Rucio-data.json'
+# json_file = 'Rucio-data.json'
+json_file = 'Rucio-CTA-bkp-test.json'
+
 
 # Predifine origin RSE 
 DEFAULT_ORIGIN_RSE = 'PIC-INJECT'
